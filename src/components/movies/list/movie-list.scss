@@ -1,3 +1,11 @@
 .movie-list-container {
     height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    margin: 45px 11px;
+    align-items: center;
+    gap: 40px;
 }

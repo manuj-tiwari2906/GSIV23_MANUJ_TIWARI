@@ -1,11 +1,11 @@
-import "./App.css";
+import "./App.scss";
 import Navbar from "./components/common/navbar";
 import { MovieList } from "./components/movies";
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div className="nav-and-screens">
       <Navbar />
       <Routes>
         <Route path="/" element={<MovieList />} />

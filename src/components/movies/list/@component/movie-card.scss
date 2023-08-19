@@ -1,0 +1,26 @@
+.movie-card {
+    border-radius: 7px;
+    box-shadow: 0 0 10px #80808054;
+    .backdrop-container {
+
+        img {
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+
+    }
+    .description-container {
+        padding: 10px;
+
+        .title-and-rating {
+            .title {
+                width: 140px;
+                font-weight: 500;
+                font-size: 14px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

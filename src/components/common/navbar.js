@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from 'antd';
 import './navbar.scss';
+import MovieIcon from '../../icons/movies.svg'
 
 const { Search } = Input;
 
@@ -8,10 +9,10 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="search-container">
-        <Search />
+        <Search placeholder="Search movies here ..." />
       </div>
       <div className="logo-container">
-        <img />
+        <img src={MovieIcon}/>
       </div>
     </div>
   );
