@@ -1,11 +1,14 @@
 import React from 'react';
-import './start-rating.scss'; // Import the CSS file
+import './star-rating.scss';
 
 const StarRating = ({ rating }) => {
-  const maxRating = 10; // Total rating out of 10
-  const roundedRating = Math.round(rating * 2) / 2; // Round to the nearest 0.5
-  const filledStars = Math.round((roundedRating / maxRating) * 5);
-  const emptyStars = 10 - filledStars;
+  const maxRating = 10;
+  const maxStars = 5; 
+
+  const ratingRatio = rating / maxRating;
+
+  const filledStars = Math.round(ratingRatio * maxStars);
+  const emptyStars = maxStars - filledStars;
 
   const filledStar = <span className="star">&#9733;</span>;
   const emptyStar = <span className="star">&#9734;</span>;
@@ -19,3 +22,4 @@ const StarRating = ({ rating }) => {
 };
 
 export default StarRating;
+

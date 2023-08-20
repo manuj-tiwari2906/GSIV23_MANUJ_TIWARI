@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from 'antd';
 import './navbar.scss';
-import MovieIcon from '../../icons/movies.svg'
+import MovieIcon from '../../icons/logo-img.webp';
 
 const { Search } = Input;
 

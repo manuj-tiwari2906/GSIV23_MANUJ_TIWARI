@@ -1,26 +1,43 @@
 .movie-card {
-    border-radius: 7px;
-    box-shadow: 0 0 10px #80808054;
-    .backdrop-container {
+  border-radius: 7px;
+  box-shadow: 0 0 21px -1px #fff5f591;
+  color: #ffff;
+  cursor: pointer;
 
-        img {
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-        }
-
+  .backdrop-container {
+    img {
+      width: 310px;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
     }
-    .description-container {
-        padding: 10px;
+  }
+  .description-container {
+    padding: 10px 15px 20px 15px;
 
-        .title-and-rating {
-            .title {
-                width: 140px;
-                font-weight: 500;
-                font-size: 14px;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-        }
+    .title-and-rating {
+      display: flex;
+      justify-content: space-between;
+      font-family: sans-serif;
+      font-weight: 700;
+      .title {
+        width: 140px;
+        font-weight: 500;
+        font-size: 17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
+    .description {
+      overflow: hidden;
+      display: -webkit-box;
+      margin-top: 30px;
+      opacity: 0.5;
+      font-size: 14px;
+      line-height: 15px;
+      width: 280px;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
 }

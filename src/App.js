@@ -1,6 +1,6 @@
 import "./App.scss";
 import Navbar from "./components/common/navbar";
-import { MovieList } from "./components/movies";
+import { MovieDetails, MovieList } from "./components/movies";
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
     <div className="nav-and-screens">
       <Navbar />
       <Routes>
-        <Route path="/" element={<MovieList />} />
+        <Route exact path="/:title/:id" element={<MovieDetails />} />
+        <Route exact path="/" element={<MovieList />} />
       </Routes>
     </div>
   );

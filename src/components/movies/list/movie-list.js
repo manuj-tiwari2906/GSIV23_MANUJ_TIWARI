@@ -8,13 +8,13 @@ import { isNotEmptyArray } from '../../common/utils/utils';
 
 const MovieList = () => {
 
-    const movieList = useFetch(userService.getLatestMovies)
+    const movieList = useFetch({ apiCall: userService.getLatestMovies })
+    console.log(movieList, 'list')
 
     if(movieList.loading) {
         return <Spinner />
     }
     
-    console.log(movieList, 'list')
   return (
     <div className='movie-list-container' >
         {
