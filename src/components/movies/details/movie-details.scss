@@ -1,37 +1,71 @@
 .details-container {
-    box-shadow: 0 0 10px #8080807d;
-    padding: 10px;
-    border-radius: 7px;
-    margin: 20px 10px 10px 10px;
-    display: flex;
-    gap: 16px;
-    background: #000000;
+  box-shadow: 0 0 17px 0px #ffffff7d;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 20px 10px 10px 10px;
+  display: flex;
+  color: #ffff;
+  gap: 16px;
+  background: #000000;
 
-    .rating {
-        .imdb-rating {
+  .details-container > img {
+    border-radius: 6px;
+    box-shadow: 0 0 10px #c4baba7d;
+  }
 
+  .details-box {
+
+    .additional-details {
+        font-size: 13px;
+        .duration {
+            margin-bottom: 14px;
+            font-size: 13px;
         }
+    }
+    .tagline {
+        font-size: 14px;
+        padding-bottom: 10px;
+        font-family: fantasy;
+        padding-top: 40px;
+        text-shadow: 0px 4px 5px #beaeae;
+    }
+    .genres {
+      display: flex;
+      font-size: 13px;
+      gap: 14px;
+      padding-bottom: 50px;
+
+      .vertical-divider {
+        width: 1px;
+        background: lemonchiffon;
+        box-shadow: 0 0 16px 3px antiquewhite;
+      }
+    }
+    .rating {
+      .imdb-rating {
+      }
     }
 
     .title-and-rating {
-        display: flex;
-        padding-top: 10px;
-        padding-bottom: 33px;
-        gap: 20px;
-    }
-
-    img {
-        border-radius: 6px;
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 13px;
+      gap: 20px;
     }
 
     .title {
-        font-size: 23px;
-    font-weight: 600;
+      font-size: 23px;
+      font-weight: 600;
     }
 
     .description {
-        opacity: 0.4;
-        font-size: 14px;
-        line-height: 17px;
+      opacity: 0.4;
+      font-size: 14px;
+      line-height: 17px;
     }
+  }
+}
+.outer-div {
+  background: black;
+  height: 100%;
 }

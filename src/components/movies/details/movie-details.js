@@ -32,13 +32,11 @@ const MovieDetails = () => {
     var rhours = Math.floor(hours);
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
-    return (
-      rhours + " hours " + rminutes + " minutes"
-    );
+    return rhours + " hours " + rminutes + " minutes";
   }
 
   return (
-    <>
+    <div className="outer-div">
       {loading && <Spinner />}
       {!loading && !isEmptyObject(data) && (
         <div className="details-container">
@@ -53,14 +51,24 @@ const MovieDetails = () => {
                 <StarRating rating={data?.vote_average} />
               </div>
             </div>
-            <div className="">
-              <div>{timeConvert(data?.runtime)}</div>
+            <div className="genres">
+              {data?.genres.map((genre, genreIndex) => (
+                <>
+                  <div key={genreIndex}>{genre.name}</div>
+                  {(genreIndex < data.genres?.length - 1) && <div className="vertical-divider"></div>}
+                </>
+              ))}
             </div>
+            <div className="additional-details">
+              <div className="duration">Duration - {timeConvert(data?.runtime)}</div>
+              <div className="release-date">Releasing on - {data?.release_date}</div>
+            </div>
+            <div className="tagline">{data?.tagline}</div>
             <div className="description">{data?.overview}</div>
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
