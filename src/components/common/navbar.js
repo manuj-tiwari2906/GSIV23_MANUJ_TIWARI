@@ -5,11 +5,11 @@ import MovieIcon from '../../icons/logo-img.webp';
 
 const { Search } = Input;
 
-const Navbar = () => {
+const Navbar = ({ onSearchChange }) => {
   return (
     <div className="navbar-container">
       <div className="search-container">
-        <Search placeholder="Search movies here ..." />
+        <Search onChange={onSearchChange} placeholder="Search movies here ..." />
       </div>
       <div className="logo-container">
         <img src={MovieIcon}/>

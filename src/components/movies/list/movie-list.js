@@ -6,10 +6,13 @@ import userService from '../../../services/user.service';
 import { Spinner } from '../../common/spinner';
 import { isNotEmptyArray } from '../../common/utils/utils';
 
-const MovieList = () => {
+const MovieList = ({ searchTerm }) => {
 
     const movieList = useFetch({ apiCall: userService.getLatestMovies })
-    console.log(movieList, 'list')
+
+    const filteredMovies = movieList.data?.results.filter((movie) =>
+        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     if(movieList.loading) {
         return <Spinner />
@@ -19,7 +22,7 @@ const MovieList = () => {
     <div className='movie-list-container' >
         {
             movieList.data && movieList.data?.results && isNotEmptyArray(movieList.data.results) &&
-            movieList.data.results.map((movie, movieIndex) => (
+            filteredMovies.map((movie, movieIndex) => (
                 <MovieCard key={movieIndex} movie={movie} />
             ))
         }
