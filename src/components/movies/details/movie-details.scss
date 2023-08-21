@@ -69,6 +69,15 @@
   background: black;
   height: calc(100% - 59px);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  :where(.css-dev-only-do-not-override-byeoj0).ant-btn-primary {
+    width: 200px;
+    margin: 20px;
+    font-weight: 600px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {

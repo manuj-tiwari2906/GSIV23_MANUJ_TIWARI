@@ -20,4 +20,11 @@
   background: #000000;
   box-shadow: 0 0 20px 0px #fff5f591;
   z-index: 99;
+
+  :where(.css-dev-only-do-not-override-byeoj0).ant-input-group .ant-input:disabled {
+    background: #fff;
+  }
+  :where(.css-dev-only-do-not-override-byeoj0).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button:disabled {
+    background: #fff;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import userService from "../../../services/user.service";
 import { Spinner } from "../../common/spinner";
@@ -7,12 +7,14 @@ import { isEmptyObject } from "../../common/utils/utils";
 import { StarRating } from "../list/@component";
 import "./movie-details.scss";
 import ErrorApi from "../../common/error-api/error-api";
+import { Button } from "antd";
 
 const MovieDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     setLoading(true);
@@ -46,9 +48,10 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="outer-div">
+     <div className="outer-div">
       {!loading && !isEmptyObject(data) && (
-        <div className="details-container">
+        <>
+            <div className="details-container">
           <img
             className="movie-image"
             src={"https://image.tmdb.org/t/p/w300/" + data?.poster_path}
@@ -82,6 +85,8 @@ const MovieDetails = () => {
             <div className="description">{data?.overview}</div>
           </div>
         </div>
+        <Button onClick={() => navigate('/')} type="primary">Back</Button>
+        </>
       )}
     </div>
   );
