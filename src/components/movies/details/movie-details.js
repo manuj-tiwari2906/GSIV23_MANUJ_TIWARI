@@ -85,7 +85,7 @@ const MovieDetails = () => {
             <div className="description">{data?.overview}</div>
           </div>
         </div>
-        {/* <Button onClick={() => navigate('/')} type="primary">Back</Button> */}
+        <Button onClick={() => navigate('/')} type="primary">Back</Button>
         </>
       )}
     </div>
