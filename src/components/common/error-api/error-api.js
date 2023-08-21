@@ -3,7 +3,6 @@ import React from "react";
 import "./error-api.scss";
 
 const ErrorApi = () => {
-  console.log("in");
   return (
     <div className="error-box">
       <div className="error-text">

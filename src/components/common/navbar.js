@@ -10,7 +10,6 @@ const Navbar = ({ onSearchChange }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location)
   return (
     <div className="navbar-container">
       <div className="search-container">
