@@ -14,20 +14,24 @@
   }
 
   .details-box {
-
     .additional-details {
+      font-size: 13px;
+      .duration {
+        margin-bottom: 14px;
         font-size: 13px;
-        .duration {
-            margin-bottom: 14px;
-            font-size: 13px;
-        }
+      }
+      .release-date {
+        font-size: 18px;
+        color: #a52a2a;
+        font-family: monospace;
+      }
     }
     .tagline {
-        font-size: 14px;
-        padding-bottom: 10px;
-        font-family: fantasy;
-        padding-top: 40px;
-        text-shadow: 0px 4px 5px #beaeae;
+      font-size: 14px;
+      padding-bottom: 10px;
+      font-family: fantasy;
+      padding-top: 40px;
+      text-shadow: 0px 4px 5px #beaeae;
     }
     .genres {
       display: flex;
@@ -39,10 +43,6 @@
         width: 1px;
         background: lemonchiffon;
         box-shadow: 0 0 16px 3px antiquewhite;
-      }
-    }
-    .rating {
-      .imdb-rating {
       }
     }
 
@@ -67,5 +67,17 @@
 }
 .outer-div {
   background: black;
-  height: 100%;
+  height: calc(100% - 59px);
+  overflow: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  /* Styles for small-sized screens */
+  .details-container {
+    flex-wrap: wrap;
+
+    .movie-image {
+      width: 100%;
+    }
+  }
 }

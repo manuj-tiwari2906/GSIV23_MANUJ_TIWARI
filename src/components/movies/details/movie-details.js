@@ -6,22 +6,24 @@ import { Spinner } from "../../common/spinner";
 import { isEmptyObject } from "../../common/utils/utils";
 import { StarRating } from "../list/@component";
 import "./movie-details.scss";
+import ErrorApi from "../../common/error-api/error-api";
 
 const MovieDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
     userService.getMovieDetails({ id }).then(
-      // setLoading(true),
       (response) => {
         setLoading(false);
         setData(response.data);
       },
       (error) => {
-        console.log("error");
+        setError(error);
+        setLoading(false);
       }
     );
   }, [id]);
@@ -35,9 +37,16 @@ const MovieDetails = () => {
     return rhours + " hours " + rminutes + " minutes";
   }
 
+  if (loading) {
+    return <Spinner />;
+  }
+
+  if (!loading && !!data && error) {
+    return <ErrorApi />;
+  }
+
   return (
     <div className="outer-div">
-      {loading && <Spinner />}
       {!loading && !isEmptyObject(data) && (
         <div className="details-container">
           <img
@@ -55,13 +64,19 @@ const MovieDetails = () => {
               {data?.genres.map((genre, genreIndex) => (
                 <>
                   <div key={genreIndex}>{genre.name}</div>
-                  {(genreIndex < data.genres?.length - 1) && <div className="vertical-divider"></div>}
+                  {genreIndex < data.genres?.length - 1 && (
+                    <div className="vertical-divider"></div>
+                  )}
                 </>
               ))}
             </div>
             <div className="additional-details">
-              <div className="duration">Duration - {timeConvert(data?.runtime)}</div>
-              <div className="release-date">Releasing on - {data?.release_date}</div>
+              <div className="duration">
+                Duration - {timeConvert(data?.runtime)}
+              </div>
+              <div className="release-date">
+                Release Date - {data?.release_date}
+              </div>
             </div>
             <div className="tagline">{data?.tagline}</div>
             <div className="description">{data?.overview}</div>

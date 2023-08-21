@@ -1,22 +1,22 @@
 .search-container {
-    padding: 10px;
-    width: calc(100% - 200px);
+  padding: 10px;
+  width: calc(100% - 200px);
 }
 
 .logo-container {
-    text-align: right;
-    padding-right: 20px;
-    img {
-        width: 40px;
-        height: 56px;
-    }
+  text-align: right;
+  padding-right: 20px;
+  img {
+    width: 40px;
+    height: 56px;
+  }
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000000;
-    box-shadow: 0 0 20px 0px #fff5f591;
-    z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  box-shadow: 0 0 20px 0px #fff5f591;
+  z-index: 99;
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import './star-rating.scss';
+import React from "react";
+import "./star-rating.scss";
 
 const StarRating = ({ rating }) => {
   const maxRating = 10;
-  const maxStars = 5; 
+  const maxStars = 5;
 
   const ratingRatio = rating / maxRating;
 
@@ -22,4 +22,3 @@ const StarRating = ({ rating }) => {
 };
 
 export default StarRating;
-

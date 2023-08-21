@@ -2,15 +2,14 @@ import { useState } from "react";
 import "./App.scss";
 import Navbar from "./components/common/navbar";
 import { MovieDetails, MovieList } from "./components/movies";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState('');
-
-    const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <div className="nav-and-screens">

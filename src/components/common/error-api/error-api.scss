@@ -1,0 +1,21 @@
+.error-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  background: #000000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  :where(.css-dev-only-do-not-override-byeoj0).ant-btn-primary {
+    background-color: brown;
+    border: none;
+    font-weight: 600;
+  }
+  .error-text {
+    font-size: 23px;
+    color: brown;
+    font-weight: 600;
+  }
+}
