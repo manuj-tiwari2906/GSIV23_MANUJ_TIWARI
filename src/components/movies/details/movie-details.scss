@@ -73,7 +73,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  :where(.css-dev-only-do-not-override-byeoj0).ant-btn-primary {
+  .ant-btn-primary {
     width: 200px;
     margin: 20px;
     font-weight: 600px;

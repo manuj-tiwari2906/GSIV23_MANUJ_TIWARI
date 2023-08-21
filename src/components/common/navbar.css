@@ -1,0 +1,29 @@
+.search-container {
+  padding: 10px;
+  width: calc(100% - 200px);
+}
+
+.logo-container {
+  text-align: right;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.logo-container img {
+  width: 40px;
+  height: 56px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  box-shadow: 0 0 20px 0px rgba(255, 245, 245, 0.568627451);
+  z-index: 99;
+}
+.navbar-container .ant-input:disabled {
+  background: #fff;
+}
+.navbar-container .ant-input-search-button:disabled {
+  background: #fff;
+}/*# sourceMappingURL=navbar.css.map */

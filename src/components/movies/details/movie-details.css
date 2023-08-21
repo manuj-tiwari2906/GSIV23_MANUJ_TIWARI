@@ -1,0 +1,83 @@
+.details-container {
+  box-shadow: 0 0 17px 0px rgba(255, 255, 255, 0.4901960784);
+  padding: 10px;
+  border-radius: 7px;
+  margin: 20px 10px 10px 10px;
+  display: flex;
+  color: white;
+  gap: 16px;
+  background: #000000;
+}
+.details-container .movie-image {
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(196, 186, 186, 0.4901960784);
+}
+.details-container .details-box .additional-details {
+  font-size: 13px;
+}
+.details-container .details-box .additional-details .duration {
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.details-container .details-box .additional-details .release-date {
+  font-size: 18px;
+  color: #a52a2a;
+  font-family: monospace;
+}
+.details-container .details-box .tagline {
+  font-size: 14px;
+  padding-bottom: 10px;
+  font-family: fantasy;
+  padding-top: 40px;
+  text-shadow: 0px 4px 5px #beaeae;
+}
+.details-container .details-box .genres {
+  display: flex;
+  font-size: 13px;
+  gap: 14px;
+  padding-bottom: 50px;
+}
+.details-container .details-box .genres .vertical-divider {
+  width: 1px;
+  background: lemonchiffon;
+  box-shadow: 0 0 16px 3px antiquewhite;
+}
+.details-container .details-box .title-and-rating {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  gap: 20px;
+}
+.details-container .details-box .title {
+  font-size: 23px;
+  font-weight: 600;
+}
+.details-container .details-box .description {
+  opacity: 0.4;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.outer-div {
+  background: black;
+  height: calc(100% - 59px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.outer-div .ant-btn-primary {
+  width: 200px;
+  margin: 20px;
+  font-weight: 600px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  /* Styles for small-sized screens */
+  .details-container {
+    flex-wrap: wrap;
+  }
+  .details-container .movie-image {
+    width: 100%;
+  }
+}/*# sourceMappingURL=movie-details.css.map */
